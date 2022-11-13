@@ -80,7 +80,7 @@ function App() {
         🐨 add inline styles here to set the opacity to 0.6 if the
         useTransition above is pending
       */}
-      <div className="pokemon-info" style={{opacity: isPending ? 0.6 : 1}}>
+      <div className={`pokemon-info ${isPending ? 'pokemon-loading' : null}`}>
         {pokemonResource ? (
           <PokemonErrorBoundary
             onReset={handleReset}
